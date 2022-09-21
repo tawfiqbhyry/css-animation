@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cup of tea</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cup">
+        <div class="top">
+          <script>
+            let element = document.querySelector(".top");
+            let vapour = document.createElement("div");
+            vapour.classList.add("vapour");
+            for (let i = 0; i < 20; i++) {
+              let bubble = document.createElement("span");
+              bubble.style = `--i: ${Math.floor(Math.random() * i)};`;
+              vapour.appendChild(bubble);
+            }
+            element.appendChild(vapour);
+          </script>
+          <div class="circle">
+            <div class="tea"></div>
+          </div>
+        </div>
+        <div class="hand"></div>
+      </div>
+      <div class="plate"></div>
+    </div>
+  </body>
+</html>
